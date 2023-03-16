@@ -5,7 +5,7 @@ class user_service {
   constructor(userRepositories) {
     this.userRepositories = userRepositories;
   }
-  async execute({ name, email, password }) {
+  async execute({ name, email, password, isAdmin }) {
     //buscando email existente no banco de dados
     const checkUserExist = await this.userRepositories.FindByEmail(email);
 
@@ -22,6 +22,7 @@ class user_service {
    const userCreate = await this.userRepositories.create({
       name,
       email,
+      isAdmin,
       passsword: bcryptjs_hash_password,
     });
 

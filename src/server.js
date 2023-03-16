@@ -13,7 +13,7 @@ app.use(express.json());
 //connect front
 app.use(cors());
 //servindo arquivo de imagem
-app.use("/files", express.static(uploadConfig.UPLOAD_FOLDER));
+app.use("/file", express.static(uploadConfig.UPLOAD_FOLDER));
 //connect routes
 app.use(routes);
 //migrations knex

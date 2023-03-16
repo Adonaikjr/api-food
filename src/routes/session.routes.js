@@ -6,5 +6,6 @@ const sessionRouter = Router();
 const sessionController = new session_controller();
 
 sessionRouter.post("/", sessionController.createSessionSignUp);
+sessionRouter.get("/:id", sessionController.show);
 
 module.exports = sessionRouter;

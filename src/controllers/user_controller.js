@@ -8,12 +8,12 @@ class user_controller {
   //criando o usuario
   async createUser(req, res) {
     //pegando valores do body
-    const { name, email, password } = req.body;
+    const { name, email, password, isAdmin } = req.body;
 
     const userRepositories = new user_repositories();
     const userService = new user_service(userRepositories);
     
-    await userService.execute({ name, email, password });
+    await userService.execute({ name, email, password, isAdmin });
 
     return res.status(201).json();
   }
@@ -73,5 +73,16 @@ class user_controller {
 
     return res.status(200).json();
   }
+  async show(req, res){
+const { adm } = req.params 
+
+    //preciso retornar um json com o id do usuario e o isAdmin para ver se o usuario é administrador sim ou não 
+
+    const database = await sqliteConnection();
+    const user = await database.get("SELECT * FROM users WHERE id = (?)", [adm] );
+
+    return res.json({...user})
+  }
 }
 module.exports = user_controller;
+ 

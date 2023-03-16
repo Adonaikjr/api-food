@@ -14,5 +14,6 @@ plateRouter.post("/:user_id", middleAuth, upload.single('file'), plateController
 plateRouter.get("/:id", plateController.show);
 plateRouter.delete("/:id", plateController.delete);
 plateRouter.get("/", plateController.index);
+plateRouter.get("/admin/:user_id", plateController.listPlate);
 
 module.exports = plateRouter;

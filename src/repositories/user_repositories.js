@@ -11,12 +11,13 @@ class user_repositories {
     return user;
   }
   
-  async create({ name, email, passsword }) {
+  async create({ name, email, passsword, isAdmin }) {
     const database = await sqliteConnection();
     //inserindo informações (REGISTROS) no banco de dados
+    
     const userId = await database.run(
-      "INSERT INTO users (name, email, password) VALUES (?, ?, ?)",
-      [name, email, passsword]
+      "INSERT INTO users (name, email, password, isAdmin) VALUES (?, ?, ?, ?)",
+      [name, email, passsword, isAdmin]
     );
     return { id: userId };
   }

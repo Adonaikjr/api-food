@@ -27,6 +27,14 @@ class session_controller {
 
     return res.json({ user, token });
   }
+
+  async show(req, res){
+    const {id} = req.params
+
+    const user = await knex("users").where({id}).first()
+
+    res.json(user)
+  }
 }
 
 module.exports = session_controller;
