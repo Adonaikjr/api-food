@@ -2,8 +2,22 @@
 # Food Explorer
 
 Este projeto foi desenvolvido no projeto final na rocketseat do programa Explorer
-
 Um restaurante que contém Admin e Usuarios
+
+## Instalação
+Clone este repositorio, em seguida instale o node_modules dentro da raiz do projeto 
+
+Instale o projeto com npm ou yarn
+
+```bash
+  cd api-food
+  npm install
+```
+
+## 🔗 Links
+- Projeto ao vivo https://explorer-food.netlify.app/
+- front-end https://github.com/Adonaikjr/explorerFood-frontend
+
 ## Documentação da API
 
 #### Retorna todos os itens
