@@ -14,10 +14,6 @@ Instale o projeto com npm ou yarn
   npm install
 ```
 
-## 🔗 Links
-- Projeto ao vivo https://explorer-food.netlify.app/
-- front-end https://github.com/Adonaikjr/explorerFood-frontend
-
 ## Documentação da API
 
 #### Retorna todos os itens
@@ -111,5 +107,6 @@ resposta:
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://adonaikjr.netlify.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adonaikjr/)
 - projeto ao vivo https://explorer-food.netlify.app/
+- front-end https://github.com/Adonaikjr/explorerFood-frontend
 
 
