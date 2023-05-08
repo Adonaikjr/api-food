@@ -13,7 +13,6 @@ class user_service {
     if (checkUserExist) {
       throw new AppError("O email informado já está em uso por outro usuario");
     }
-    //fim do check do email
 
     //criptografia from password
     const bcryptjs_hash_password = await hash(password, 8);

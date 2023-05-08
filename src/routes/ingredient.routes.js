@@ -11,11 +11,5 @@ const ingredientController = new ingredient_controller();
 
 ingredientRoutes.post("/:user_id", ingredientController.create);
 ingredientRoutes.get("/:user_id", ingredientController.show);
-ingredientRoutes.patch(
-  "/file",
-  middleAuth,
-  upload.single("file"),
-  ingredientController.updateBanner
-);
 
 module.exports = ingredientRoutes;

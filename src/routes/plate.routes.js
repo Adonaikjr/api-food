@@ -15,5 +15,5 @@ plateRouter.get("/:id", plateController.show);
 plateRouter.delete("/:id", plateController.delete);
 plateRouter.get("/", plateController.index);
 plateRouter.get("/admin/:user_id", plateController.listPlate);
-
+plateRouter.patch('/:plate_id',middleAuth, upload.single('file'), plateController.update )
 module.exports = plateRouter;

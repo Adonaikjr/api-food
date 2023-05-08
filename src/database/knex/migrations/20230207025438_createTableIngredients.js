@@ -2,7 +2,6 @@ exports.up = (knex) =>
   knex.schema.createTable("tableIngredient", (table) => {
     table.increments("id");
     table.text("name");
-    table.text("banner");
     table
       .integer("plate_id")
       .references("id")

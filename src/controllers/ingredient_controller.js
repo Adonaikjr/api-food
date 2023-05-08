@@ -22,28 +22,5 @@ class ingredient_controller {
 
     res.json(showIngredient);
   }
-  async updateBanner(req, res) {
-    const { filename } = req.file;
-    const { id } = req.body;
-
-    const diskStorage = new DiskStorage();
-    console.log(id);
-
-    const ingredient = await knex("tableIngredient").where({ id: id }).first();
-
-    if (ingredient.banner) {
-      await diskStorage.deleteFile(ingredient.banner);
-    }
-
-    const saveBanner = await diskStorage.saveFile(filename);
-
-    ingredient.banner = saveBanner;
-
-    await knex("tableIngredient").update(ingredient).where({ id: id });
-
-    console.log(ingredient);
-
-    res.json(ingredient);
-  }
 }
 module.exports = ingredient_controller;
