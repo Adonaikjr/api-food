@@ -4,8 +4,8 @@
 Este projeto foi desenvolvido no projeto final na rocketseat do programa Explorer
 Um restaurante que contém Admin e Usuarios
 
-usuario admin: admin@admin password: 123
-usuario comum: teste@teste password: 123
+- usuario admin: admin@admin password: 123
+- usuario comum: teste@teste password: 123
 
 ## Instalação
 Clone este repositorio, em seguida instale o node_modules dentro da raiz do projeto 
