@@ -12,6 +12,10 @@ Clone este repositorio, em seguida instale o node_modules dentro da raiz do proj
 
 Instale o projeto com npm ou yarn
 
+execute: yarn migrate
+execute: yarn dev
+
+
 ```bash
   cd api-food
   npm install
